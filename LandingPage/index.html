@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Landing Page-Shopify</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire">
+   </head>
+   <body>
+      <div class="main">
+      <div class="navbar">
+         <div class="icon">
+            <h2 class="logo">Shopify</h2>
+         </div>
+         <ul>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#features">FEATURES</a></li>
+            <li><a href="#about">ABOUT US</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+            <li><a href="#form"><button class="btn">SIGN IN</button></a></li>
+         </ul>
+      </div>
+      <!-- Hero Section -->
+      <section class="hero" id="home">
+         <div class="hero-content">
+            <h1>Stay Cool & Comfortable</h1>
+            <p>Discover our premium air conditioning solutions for your home.</p>
+            <a href="#form" class="button">Shop Now</a>
+         </div>
+      </section>
+      <br>
+      <!--  FEATURES SECTION -->
+      <section class="features" id="features">
+         <h2>FEATURES</h2>
+         <div class="features-container">
+            <div class="feature fade-in">
+               <img src="images/energy.png" alt="Energy Efficient">
+               <h3>Energy Efficient</h3>
+               <p>Save on your power bills with cutting-edge technology.</p>
+            </div>
+            <div class="feature fade-in">
+               <img src="images/mute.png" alt="Silent Operation">
+               <h3>Whisper Quiet</h3>
+               <p>Enjoy a cool room without the noise.</p>
+            </div>
+            <div class="feature fade-in">
+               <img src="images/smart.png" alt="Smart Control">
+               <h3>Smart Control</h3>
+               <p>Control from anywhere with your phone.</p>
+            </div>
+         </div>
+      </section>
+      <!--  About us Section -->
+      <section class="about" id="about">
+         <h2>ABOUT US</h2>
+         <p>We are a trusted Shopify brand providing high-quality air conditioners designed for energy efficiency and comfort. Our mission is to keep you cool all year round.</p>
+         <div class="mission-vision">
+         <div class="mission">
+          <h3>Our Mission</h3>
+          <p>To deliver cutting-edge air conditioning products that combine comfort, energy savings, and innovative smart features for every home and business.</p>
+         </div>
+         <div class="vision">
+          <h3>Our Vision</h3>
+          <p>To become the most trusted and sustainable air conditioning brand, setting new standards for efficiency and customer satisfaction worldwide.</p>
+         </div>
+        </div>
+      </section>
+      <!-- Testimonials Section -->
+      <section class="testimonials">
+         <h2>What Our Customers Say</h2>
+         <div class="test-list" id="test">
+            <div class="test-card">
+               <p>"This AC keeps my entire house cool and my energy bill low!"</p>
+               <span>- Alex T.</span>
+            </div>
+            <div class="test-card">
+               <p>"Silent, powerful, and easy to control with my phone. Highly recommend!"</p>
+               <span>- Jamie L.</span>
+            </div>
+         </div>
+      </section>
+      <!--  Call to  action Section -->
+      <section id="buy" class="cta">
+         <h2>Ready to Stay Cool?</h2>
+         <a href="#form" class="button">Add to Cart</a>
+      </section>
+      <br>
+      <!--  Contact Section -->
+      <section class="contact" id="contact">
+         <h2>CONTACT US</h2>
+         <p>Email us at <a href="mailto:support@shopify.com">support@shopify.com</a></p>
+      </section>
+      <!-- SIGN IN FORM SECTION -->
+      <div class="signin" id="form">
+         <center>
+            <h1 >SIGN IN</h1>
+         </center>
+         <label>Enter Your Name :</label>
+         <input type="text" id="id1" placeholder="Enter Your Name"><br><br>
+         <label>Enter Your Mobile Number :</label>
+         <input type="text" id="id2" placeholder="Enter your Mobile Number"><br><br>
+         <label>Enter Your Email Address :</label>
+         <input type="email" id="id3" placeholder="Enter your Email Address"><br><br>
+         <center><button onclick="validate()">Submit</button></center>
+      </div>
+      <script>
+         function validate() {
+           var name = document.getElementById("id1").value.trim();
+           var mobile = document.getElementById("id2").value.trim();
+           var email = document.getElementById("id3").value.trim();
+           
+         
+           var alpha = /^[A-Za-z\s]+$/;
+           var number = /^[0-9]{10}$/;
+           var emailFormat = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+         
+           if (name === "") {
+             alert("Enter Name!");
+           } else if (!alpha.test(name)) {
+             alert("Use Only Alphabets in Name!");
+           } else if (mobile === "") {
+             alert("Enter Mobile Number!");
+           } else if (!number.test(mobile)) {
+             alert("Mobile number must be exactly 10 digits!");
+           } else if (email === "") {
+             alert("Enter Email Address!");
+           } else if (!emailFormat.test(email)) {
+             alert("Use a valid Email Format!");
+           }
+           else {
+             alert("Submitted Successfully!");
+           }
+         }
+         
+         document.querySelectorAll('a[href^=\"#\"]').forEach(anchor => {
+         anchor.addEventListener('click', function(e) {
+           e.preventDefault();
+           document.querySelector(this.getAttribute('href')).scrollIntoView({
+             behavior: 'smooth'
+           });
+         });
+         });
+      </script>
+      <!--  Footer Section -->
+      <footer>
+         <p>&copy; 2025 YourShopifyStore</p>
+         <nav>
+            <a href="/pages/terms-of-service">Terms</a>
+            <a href="/pages/privacy-policy">Privacy</a>
+            <a href="/pages/contact">Contact</a>
+            <a href="#home" class="home-tab">⬆ Back to Home</a>
+         </nav>
+      </footer>
+   </body>
+</html>

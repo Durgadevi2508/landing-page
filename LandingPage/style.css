@@ -1,0 +1,274 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Segoe UI', sans-serif;
+	background: #c9f5ec;
+	color: #020203;
+}
+
+
+/* Navbar */
+.navbar {
+	background: #3e7e79;
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+	flex-wrap: wrap;
+	font-family: "Audiowide", sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 0.5;
+
+}
+
+
+.logo {
+	font-size: 26px;
+	font-weight: bold;
+	font-family: "Audiowide", sans-serif;
+	text-shadow: 3px 3px 2px black;
+}
+
+.navbar ul {
+	list-style: none;
+	display: flex;
+	gap: 1.5rem;
+}
+
+.navbar ul li a {
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+
+}
+
+.btn {
+	padding: 0.5rem 1rem;
+	background: #045b52;
+	color: white;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+	font-family: "Audiowide", sans-serif;
+
+}
+
+.btn:hover {
+	background: #74dcc9;
+}
+
+
+/* HERO */
+.hero {
+	height: 90vh;
+	background: url('images/bgac1.jpg') center/cover no-repeat;
+	display: flex;
+	align-items: center;
+	justify-content: left;
+	text-align: center;
+}
+
+.hero-content {
+	background: rgba(0, 0, 0, 0.6);
+	color: #fff;
+	padding: 32px;
+	border-radius: 8px;
+	margin: 9px;
+}
+
+.button {
+	display: inline-block;
+	background:  #07342c;
+	color: #ecf0f4;
+	padding: 1rem 2rem;
+	text-decoration: none;
+	border-radius: 9999px;
+	margin-top: 1rem;
+}
+
+.button:hover{
+    background: #2e917f;
+}
+
+/* FEATURES */
+.features {
+	margin-bottom: 16px;
+	padding: 4rem 2rem;
+	text-align: center;
+	background: #2e917f;
+	color: rgb(15, 14, 14);
+}
+
+h1,
+h2 {
+	font-size: 32px;
+	margin-bottom: 30px;
+	font-family: "Audiowide", sans-serif;
+	color: #fff;
+}
+
+.features-container {
+	display: flex;
+	background: #f0f5f4;
+	margin-left: 10px;
+	padding: 15px 90px 15px 90px;
+	border-radius: 10px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+	text-align: center;
+	justify-content: center;
+	transition: 0.5s ease-in-out;
+}
+
+
+
+.features img {
+	width: 60px;
+	margin-bottom: 1rem;
+}
+/* ABOUT SECTION */
+.about {
+	background-color: #2e917f;
+	color: #020203;
+
+}
+
+.about .mission-vision {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.about .mission-vision div {
+  background:#d7e0df;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+
+/* ABOUT, TESTIMONIALS, CTA, CONTACT */
+.about,
+.testimonials,
+.cta,
+.contact {
+	padding: 4rem 2rem;
+	text-align: center;
+}
+
+.testimonials {
+	background-color: #2e917f;
+	margin: 2rem auto;
+	padding: 15px 90px 15px 90px;
+	border-radius: 1px;
+
+}
+
+.test-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 1.5rem;
+	margin-top: 2rem;
+
+
+}
+
+.test-card {
+	background: #e4e9e8;
+	border-radius: 10px;
+	padding: 1.5rem;
+	width: 250px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+	transition: 0.3s ease-in-out;
+}
+
+
+
+.cta,
+.contact {
+	background-color: #2e917f;
+	;
+}
+
+
+/* Sign In Form */
+
+.signin {
+	max-width: 600px;
+	margin: auto;
+	padding: 32px;
+	background: #2e917f;
+	border-radius: 10px;
+	font-family: sans-serif;
+	align-items: center;
+	margin-top: 15px;
+    margin-bottom: 15px;
+
+}
+
+.signin input {
+	width: 100%;
+	padding: 0.8rem;
+	margin-top: 5px;
+	margin-bottom: 1rem;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	font-size: 1rem;
+}
+
+.signin button {
+	padding: 0.8rem 2rem;
+	background-color: #07342c;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: 0.5s ease-in;
+
+}
+
+.signin button:hover {
+	background-color: #1b585b;
+
+}
+
+
+footer {
+	background: #222;
+	color: #aaa;
+	text-align: center;
+	padding: 2rem;
+    position: sticky;
+}
+
+footer nav a {
+	color: #aaa;
+	margin: 0 1rem;
+	text-decoration: none;
+}
+
+.fade-in {
+	opacity: 0;
+	animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+	to {
+		opacity: 1;
+	}
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+	.features-container {
+		flex-direction: column;
+		align-items: center;
+	}
+}
